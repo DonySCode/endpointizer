@@ -80,7 +80,7 @@ Instead of manually defining each route, **Endpointizer** dynamically registers 
 - **Task Name**: A human-readable identifier for your endpoint.
 - **HTTP Method**: The method (GET, POST, etc.).
 - **Route**: The path of your endpoint.
-- **Handler**: The function or logic that will be executed when the endpoint is hit.
+- **Params**: The params that your endpoint should receive. Model TBD.
 
 For example, imagine you have a task to create a user. Instead of defining the route yourself, you simply define a task:
 
@@ -89,7 +89,7 @@ For example, imagine you have a task to create a user. Instead of defining the r
   name: 'createUser',
   method: 'POST',
   route: '/user',
-  handler: 'createUserHandler',
+  params: {},
 }
 ```
 
