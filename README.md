@@ -1,98 +1,148 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Endpointizer
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+**Endpointizer** is a dynamic API generator that allows you to create backend tasks with a single endpoint. By defining tasks in a configuration, **Endpointizer** will generate the necessary routes on the fly, making it easier to scale and manage your APIs. No need to define each endpoint manually—let the magic of **Endpointizer** handle it for you!
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+---
 
-## Description
+## Table of Contents
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- [Why Endpointizer?](#why-endpointizer)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [How It Works](#how-it-works)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Project setup
+---
 
-```bash
-$ npm install
-```
+## Why Endpointizer?
 
-## Compile and run the project
+In traditional backend development, adding endpoints can quickly become repetitive. **Endpointizer** simplifies this by allowing you to define your API routes dynamically, creating them as needed. This is perfect for projects with constantly changing requirements, quick prototypes, or just if you want to save time on boilerplate code.
 
-```bash
-# development
-$ npm run start
+### Key Benefits:
 
-# watch mode
-$ npm run start:dev
+- **Dynamic Endpoint Generation**: One endpoint to create many.
+- **Modular**: Add or modify endpoints easily without touching multiple files.
+- **Scalable**: Build APIs that can grow with your application.
+- **Clean and Elegant**: No more repetitive route definitions. Just create and configure.
 
-# production mode
-$ npm run start:prod
-```
+---
 
-## Run tests
+## Features
+
+- **Dynamic Endpoint Creation**: Generate GET, POST, PUT, DELETE endpoints at runtime.
+- **Task-based API**: Each endpoint is treated as a task for easier management and scaling.
+- **NestJS Integration**: Built on top of NestJS, leveraging its powerful routing and modular system.
+- **Open Source**: Free for anyone to use and contribute to.
+
+---
+
+## Getting Started
+
+To get started with **Endpointizer**, you'll need **Node.js** and **NestJS**. If you haven’t already, install the NestJS CLI:
+
+### 1. Install NestJS CLI
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+npm install -g @nestjs/cli
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+### 2. Clone the Repository
 
 ```bash
-$ npm install -g mau
-$ mau deploy
+git clone https://github.com/your-username/endpointizer.git
+cd endpointizer
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+### 3. Install Dependencies
 
-## Resources
+```bash
+npm install
+```
 
-Check out a few resources that may come in handy when working with NestJS:
+### 4. Run the Application
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+```bash
+npm run start
+```
 
-## Support
+Your API should now be running at `http://localhost:3000`.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+---
 
-## Stay in touch
+## How It Works
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+### Creating Dynamic Endpoints
+
+Instead of manually defining each route, **Endpointizer** dynamically registers endpoints based on a set of predefined tasks. Each task defines:
+
+- **Task Name**: A human-readable identifier for your endpoint.
+- **HTTP Method**: The method (GET, POST, etc.).
+- **Route**: The path of your endpoint.
+- **Handler**: The function or logic that will be executed when the endpoint is hit.
+
+For example, imagine you have a task to create a user. Instead of defining the route yourself, you simply define a task:
+
+```ts
+{
+  name: 'createUser',
+  method: 'POST',
+  route: '/user',
+  handler: 'createUserHandler',
+}
+```
+
+This will automatically create the `/user` endpoint and map the `POST` method to the `createUserHandler` function.
+
+### API Endpoints
+
+**Endpointizer** provides the following routes:
+
+- `GET /task`: List all the dynamic tasks (endpoints).
+- `POST /task/:taskName`: Trigger the creation of an endpoint based on the task configuration.
+
+---
+
+## Usage
+
+After setting up the project and running the server, you can start creating your dynamic endpoints.
+
+1. **List Available Tasks**  
+   Make a `GET` request to `/task` to see all the tasks (endpoints) defined in your system.
+
+2. **Create a Task (Endpoint)**  
+   Make a `POST` request to `/task/:taskName`, where `:taskName` is the task you want to create. This will trigger the creation of that task’s endpoint.
+
+---
+
+## Contributing
+
+We welcome contributions to **Endpointizer**! If you have ideas for new features or improvements, feel free to open an issue or submit a pull request.
+
+### How to Contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to your branch (`git push origin feature-branch`).
+5. Create a new pull request!
+
+---
 
 ## License
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+**Endpointizer** is open-source and released under the [MIT License](LICENSE).
+
+---
+
+## Acknowledgments
+
+- Built on top of **NestJS**, which provides a powerful framework for building scalable and maintainable server-side applications.
+- Special thanks to the open-source community for their ongoing contributions to making web development easier and faster!
+
+---
+
+That's it! With **Endpointizer**, creating scalable, dynamic APIs has never been easier. Have fun building! 😊
+
+---
