@@ -1,4 +1,4 @@
-import { IsString, IsNotEmpty, IsIn, IsObject } from 'class-validator';
+import { IsString, IsNotEmpty, IsIn, IsObject, IsOptional, IsArray, IsBoolean } from 'class-validator';
 
 export class CreateTaskDto {
   @IsString()
@@ -14,5 +14,18 @@ export class CreateTaskDto {
   route: string;
 
   @IsObject()
-  params: any;
+  @IsOptional()
+  inputSchema: Record<string, any>;
+
+  @IsObject()
+  @IsOptional()
+  responseSchema: Record<string, any>;
+
+  @IsArray()
+  @IsOptional()
+  middleware: string[];
+
+  @IsBoolean()
+  @IsOptional()
+  isActive: boolean;
 }

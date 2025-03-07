@@ -3,6 +3,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TaskModule } from './tasks/tasks.module';
 import { Task } from './tasks/entities/task.entity';
+import { BuilderService } from './builder/builder.service';
 
 @Module({
   imports: [
@@ -25,5 +26,6 @@ import { Task } from './tasks/entities/task.entity';
     }),
     TaskModule,
   ],
+  providers: [BuilderService],
 })
 export class AppModule {}
